@@ -1,0 +1,15 @@
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+  name: myapp-yaml-files
+  labels:
+    app: myapp
+
+spec:
+  # containers is a list of containers that should be run in this yaml-files
+   containers:
+     # each item in the list is identified by a dash (-)
+     - name: nginx-container
+       image: nginx

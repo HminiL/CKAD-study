@@ -1,0 +1,19 @@
+apiServer: v1
+kind: ReplicationController
+metadata:
+  name: myapp-rc
+  labels:
+      app: myapp
+
+spec:  # specification of the ReplicationController
+  template:
+    # metadata of pods created by this template
+    metadata:
+      name: myapp-yaml-files
+      labels:
+        app: myapp
+    spec:  # specification of the yaml-files
+      containers:
+        - name: nginx-container
+          image: nginx
+  replicas: 3
