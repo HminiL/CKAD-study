@@ -8,7 +8,11 @@
 
 > kubectl get replicationcontroller
 
->kubectl get replicaset
+> kubectl get replicaset / kubectl get rs
+
+> kubectl get deployment
+
+> kubectl get all
 
 ### run commands
 > kubectl run (create a pod) --image=(image name) </br>
