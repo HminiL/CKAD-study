@@ -61,3 +61,32 @@
 
 > kubectl scale --replicas=(number) (type) (name) </br>
 *e.g. kubectl scale --replicas=6 replicaset myapp-replicaset*
+
+
+
+### formatting output
+*out put with format*
+> kubectl create namespace test-123 --dry-run -o json
+```json
+{
+    "kind": "Namespace",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "test-123",
+        "creationTimestamp": null
+    },
+    "spec": {},
+    "status": {}
+}
+```
+
+> kubectl create namespace test-123 --dry-run -o yaml
+```yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: null
+  name: test-123
+spec: {}
+status: {}
+```
