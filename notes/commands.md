@@ -13,6 +13,11 @@
 > kubectl get deployment
 
 > kubectl get all
+k
+> **get all pods in all namespaces** </br>
+> kubectl get pods --all-namespaces </br>
+> kubectl get pods -A
+
 
 > kubectl get pods --namespace=(namespace name) </br>
 > *e.g. kubectl get pods --namespace=dev*
@@ -21,8 +26,15 @@
 > kubectl run (create a pod) --image=(image name) </br>
 *e.g. kubectl run nginx --image=nginx*
 
+> kubectl run (create a pod) --image=(image name) --port=(port number) </br>
+> *e.g. kubectl run redis --image=redis --port=6379*
+
 > kubectl run (pod name) --image=(image name) >> (file name) </br>
 *e.g. kubectl run nginx --image=nginx >> nginx.yaml*
+
+> **set tier in label** </br>
+> kubectl run (pod name) --image=(image name) --labels=(label name)=(label value) </br>
+> *e.g. kubectl run nginx --image=nginx --labels="tier=frontend"*
 
 ### describe commands
 > kubectl describe pod (pod name) </br>
@@ -36,7 +48,7 @@
 
 ### create commands
 > kubectl create -f (file name) </br> 
-*e.g. kubectl create -f nginx.yaml*
+*e.g. kubectl create -f nginx.yaml*k
 
 > **create deployment** </br>
 > kubectl create deployment (deployment name) --image=(image name) -- replicas=(number)</br>
