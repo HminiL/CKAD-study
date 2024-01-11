@@ -14,6 +14,9 @@
 
 > kubectl get all
 
+> kubectl get pods --namespace=(namespace name) </br>
+> *e.g. kubectl get pods --namespace=dev*
+
 ### run commands
 > kubectl run (create a pod) --image=(image name) </br>
 *e.g. kubectl run nginx --image=nginx*
@@ -38,6 +41,10 @@
 > **create deployment** </br>
 > kubectl create deployment (deployment name) --image=(image name) -- replicas=(number)</br>
 *e.g. kubeclt create deployment httpd --image=httpd:2.4-alpine --replicas=3*
+
+> **create namespace** </br>
+> kubectl create namespace (namespace name) </br>
+> *e.g. kubectl create namespace dev*
 
 
 ### edit commands
@@ -90,3 +97,6 @@ metadata:
 spec: {}
 status: {}
 ```
+
+### config
+> kubectl config set-context (context name) --namespace=(namespace name) </br>
