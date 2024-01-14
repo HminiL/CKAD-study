@@ -34,8 +34,16 @@ k
 
 > **set tier in label** </br>
 > kubectl run (pod name) --image=(image name) --labels=(label name)=(label value) </br>
-> *e.g. kubectl run nginx --image=nginx --labels="tier=frontend"*
+ > *e.g. kubectl run nginx --image=nginx --labels="tier=frontend"*
 
+> **using a custom arguments (arg1 .. argN) for that**</br>
+> kubectl run (pod name) --image=(image name) -- (arg1) .. (argN) </br> 
+> *e.g. kubectl run webapp-color --image=webapp-color/kodekloud -- --coler green*
+
+> **using a different command and custom arguments**</br>
+> kubectl run (pod name) --image=(image name) --command -- (cmd) (arg1) .. (argN) </br>
+> *e.g. kubectl run nginx --image=nginx --command -- sleep 10*
+> 
 ### describe commands
 > kubectl describe pod (pod name) </br>
 *e.g. kubectl describe pod nginx*
