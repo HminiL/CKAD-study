@@ -112,3 +112,7 @@ status: {}
 
 ### config
 > kubectl config set-context (context name) --namespace=(namespace name) </br>
+
+### replace
+> kubectl replace --force -f (file name) </br>
+> *e.g. kubectl replace --force -f /tmp/replicaset-definition.yaml*
